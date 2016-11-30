@@ -13,6 +13,11 @@ test::
 		--transform [ babelify $(BABEL_OPTS) ] \
 		$(TESTS)
 
+dev::
+	@$(BIN)/mochify \
+		--watch --transform [ babelify $(BABEL_OPTS) ] \
+		$(TESTS)
+
 ci::
 	@$(BIN)/mochify \
 		--watch \
